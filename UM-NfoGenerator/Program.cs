@@ -23,8 +23,8 @@ class Program
     {
         while (true) {
             Console.WriteLine("Menu:");
-            Console.WriteLine("1) Create a new .NFO");
-            Console.WriteLine("2) Edit an existing .NFO");
+            Console.WriteLine("1) Create A New .NFO");
+            Console.WriteLine("2) Edit An Existing .NFO");
             Console.WriteLine("3) Exit");
             Console.Write("Select An Option (1-3): ");
             string? choice = Console.ReadLine();
@@ -87,7 +87,7 @@ class Program
 
         var audioFiles = GetAudioFiles(opts.InputPath, opts.Recursive).ToList();
         if (!audioFiles.Any()) {
-            Console.WriteLine("No Audio Files Found In The Folder! (If There Is, And The Program Doesnt See Them, Open A Issue On The Github Page).");
+            Console.WriteLine("No Audio Files Found In The Folder! (If There Is, And The Program Doesnt See Them, Open A Issue On The Github Page, As It Might Not Be Supported).");
             return;
         }
 
