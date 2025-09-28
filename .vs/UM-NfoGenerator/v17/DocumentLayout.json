@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Program.cs",
+              "RelativeDocumentMoniker": "UM-NfoGenerator\\Program.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Program.cs",
+              "RelativeToolTip": "UM-NfoGenerator\\Program.cs",
+              "ViewState": "AgIAAGgBAAAAAAAAAAAiwLgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T12:30:50.138Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

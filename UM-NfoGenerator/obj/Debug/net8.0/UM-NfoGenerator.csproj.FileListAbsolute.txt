@@ -1,0 +1,14 @@
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\bin\Debug\net8.0\UM-NfoGenerator.exe
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\bin\Debug\net8.0\UM-NfoGenerator.deps.json
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\bin\Debug\net8.0\UM-NfoGenerator.runtimeconfig.json
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\bin\Debug\net8.0\UM-NfoGenerator.dll
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\bin\Debug\net8.0\UM-NfoGenerator.pdb
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.dll
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\refint\UM-NfoGenerator.dll
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.pdb
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\UM-NfoGenerator.genruntimeconfig.cache
+C:\Users\Gebruiker\source\repos\UM-NfoGenerator\UM-NfoGenerator\obj\Debug\net8.0\ref\UM-NfoGenerator.dll
