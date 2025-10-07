@@ -23,8 +23,8 @@ class Program
     {
         while (true) {
             Console.WriteLine("Menu:");
-            Console.WriteLine("1) Create A New .NFO");
-            Console.WriteLine("2) Edit An Existing .NFO");
+            Console.WriteLine("1) Create a new .NFO");
+            Console.WriteLine("2) Edit an existing .NFO");
             Console.WriteLine("3) Exit");
             Console.Write("Select An Option (1-3): ");
             string? choice = Console.ReadLine();
@@ -87,7 +87,7 @@ class Program
 
         var audioFiles = GetAudioFiles(opts.InputPath, opts.Recursive).ToList();
         if (!audioFiles.Any()) {
-            Console.WriteLine("No Audio Files Found In The Folder! (If There Is, And The Program Doesnt See Them, Open A Issue On The Github Page, As It Might Not Be Supported).");
+            Console.WriteLine("No Audio Files Found In The Folder! (If There Is, And The Program Doesnt See Them, Open A Issue On The Github Page).");
             return;
         }
 
@@ -143,7 +143,7 @@ class Program
 
     static IEnumerable<string> GetAudioFiles(string directory, bool recursive)
     {
-        var exts = new[] { ".mp3", ".flac", ".wav", ".aac", ".m4a", ".ogg", ".wma" };
+        var exts = new[] { ".mp3", ".flac", ".wav", ".m4a", ".ogg", ".wma" };
         return Directory.EnumerateFiles(directory, "*.*", recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly)
                         .Where(f => exts.Contains(Path.GetExtension(f).ToLowerInvariant()));
     }
@@ -179,64 +179,92 @@ class Program
             {
                 if (ext == ".wav")
                 {
-                    fs.Position = 0x28; int dataSize = br.ReadInt32();
-                    fs.Position = 0x18; int sampleRate = br.ReadInt32();
-                    fs.Position = 0x22; short bitsPerSample = br.ReadInt16();
-                    fs.Position = 0x20; short channels = br.ReadInt16();
-                    return dataSize / (sampleRate * channels * bitsPerSample / 8.0);
+                    fs.Position = 0;
+                    if (Encoding.ASCII.GetString(br.ReadBytes(4)) != "RIFF")
+                        return 0;
+
+                    fs.Position += 4;
+                    if (Encoding.ASCII.GetString(br.ReadBytes(4)) != "WAVE")
+                        return 0;
+
+                    int channels = 0;
+                    int sampleRate = 0;
+                    int bitsPerSample = 0;
+                    int dataSize = 0;
+
+                    while (fs.Position < fs.Length - 8)
+                    {
+                        string chunkId = Encoding.ASCII.GetString(br.ReadBytes(4));
+                        int chunkSize = br.ReadInt32();
+
+                        if (chunkId == "fmt ")
+                        {
+                            short audioFormat = br.ReadInt16();
+                            channels = br.ReadInt16();
+                            sampleRate = br.ReadInt32();
+                            fs.Position += 6; 
+                            bitsPerSample = br.ReadInt16();
+                            fs.Position += chunkSize - 16; 
+                        }
+                        else if (chunkId == "data")
+                        {
+                            dataSize = chunkSize;
+                            break; 
+                        }
+                        else
+                        {
+                            fs.Position += chunkSize; 
+                        }
+                    }
+
+                    if (sampleRate > 0 && channels > 0 && bitsPerSample > 0 && dataSize > 0)
+                    {
+                        return dataSize / (double)(sampleRate * channels * (bitsPerSample / 8.0));
+                    }
+
+                    return 0;
                 }
 
                 else if (ext == ".flac")
                 {
                     fs.Position = 4;
                     bool lastBlock = false;
-                    while (!lastBlock)
+                    while (!lastBlock && fs.Position < fs.Length)
                     {
                         byte header = br.ReadByte();
                         lastBlock = (header & 0x80) != 0;
                         int blockType = header & 0x7F;
                         int length = (br.ReadByte() << 16) | (br.ReadByte() << 8) | br.ReadByte();
-                        if (blockType == 0)
+
+                        if (blockType == 0) 
                         {
-                            br.ReadBytes(10);
-                            byte[] buf = br.ReadBytes(8);
-                            long totalSamples = ((buf[4] & 0x0F) << 32) |
-                                                (buf[5] << 24) |
-                                                (buf[6] << 16) |
-                                                (buf[7] << 8) |
-                                                buf[8];
-                            int sampleRate = ((buf[0] << 12) | (buf[1] << 4) | (buf[2] >> 4));
-                            if (sampleRate > 0)
-                                return totalSamples / (double)sampleRate;
+                            byte[] data = br.ReadBytes(length);
+                            if (data.Length >= 18)
+                            {
+                                int sampleRate = (data[10] << 12) | (data[11] << 4) | ((data[12] & 0xF0) >> 4);
+                                long totalSamples =
+                                    ((long)(data[13] & 0x0F) << 32) |
+                                    ((long)data[14] << 24) |
+                                    ((long)data[15] << 16) |
+                                    ((long)data[16] << 8) |
+                                    (long)data[17];
+                                if (sampleRate > 0)
+                                    return totalSamples / (double)sampleRate;
+                            }
+                            break;
                         }
-                        fs.Position += length;
+                        else fs.Position += length;
                     }
                     return 0;
                 }
 
-                else if (ext == ".aac")
+                if (ext == ".m4a" || ext == ".mp4")
                 {
-                    fs.Position = 0;
-                    int frameCount = 0;
-                    int sampleRate = 0;
-                    while (fs.Position < fs.Length - 7)
-                    {
-                        byte b1 = br.ReadByte();
-                        byte b2 = br.ReadByte();
-                        if (b1 == 0xFF && (b2 & 0xF6) == 0xF0)
-                        {
-                            int srIndex = (b2 & 0x3C) >> 2;
-                            int[] sampleRates = { 96000, 88200, 64000, 48000, 44100,
-                            32000, 24000, 22050, 16000, 12000, 11025, 8000, 7350, 0, 0 };
-                            sampleRate = sampleRates[Math.Min(srIndex, sampleRates.Length - 1)];
-                            frameCount++;
-                            fs.Position += 5;
-                        }
-                        else fs.Position -= 1;
-                    }
-                    if (sampleRate > 0) return frameCount * (1024.0 / sampleRate);
-                    return 0;
+                    using var fsM4a = File.OpenRead(path);
+                    using var brM4a = new BinaryReader(fsM4a);
+                    return GetMp4DurationRecursive(fsM4a, brM4a, fsM4a.Length);
                 }
+
 
                 else if (ext == ".mp3")
                 {
@@ -320,7 +348,9 @@ class Program
                 }
             }
         }
-        catch { }
+        catch {
+            return 0;
+        }
         return 0;
     }
 
@@ -332,6 +362,72 @@ class Program
         }
         return result;
     }
+    static uint ReadUInt32BigEndian(BinaryReader br)
+    {
+        byte[] bytes = br.ReadBytes(4);
+        if (bytes.Length < 4) return 0;
+        Array.Reverse(bytes);
+        return BitConverter.ToUInt32(bytes, 0);
+    }
+    static ulong ReadUInt64BigEndian(BinaryReader br)
+    {
+        byte[] bytes = br.ReadBytes(8);
+        if (bytes.Length < 8) return 0;
+        Array.Reverse(bytes);
+        return BitConverter.ToUInt64(bytes, 0);
+    }
+
+    static double GetMp4DurationRecursive(FileStream fs2, BinaryReader br2, long end)
+    {
+        double bestDuration = 0;
+
+        while (fs2.Position < end - 8)
+        {
+            long atomStart = fs2.Position;
+            uint atomSize = ReadUInt32BigEndian(br2);
+            string atomType = new string(br2.ReadChars(4));
+
+            if (atomSize < 8 || atomSize > fs2.Length - atomStart)
+                break;
+
+            long atomEnd = atomStart + atomSize;
+
+            if (atomType == "mdhd")
+            {
+                byte version = br2.ReadByte();
+                br2.ReadBytes(3);
+
+                if (version == 1)
+                {
+                    br2.ReadBytes(16);
+                    uint timescale = ReadUInt32BigEndian(br2);
+                    ulong duration = ReadUInt64BigEndian(br2);
+                    if (timescale > 0)
+                        bestDuration = Math.Max(bestDuration, duration / (double)timescale);
+                }
+                else
+                {
+                    br2.ReadBytes(8);
+                    uint timescale = ReadUInt32BigEndian(br2);
+                    uint duration = ReadUInt32BigEndian(br2);
+                    if (timescale > 0)
+                        bestDuration = Math.Max(bestDuration, duration / (double)timescale);
+                }
+            }
+            else if (atomType == "trak" || atomType == "moov" || atomType == "mdia")
+            {
+                double nested = GetMp4DurationRecursive(fs2, br2, atomEnd);
+                bestDuration = Math.Max(bestDuration, nested);
+            }
+            else
+            {
+                fs2.Position = atomEnd;
+            }
+        }
+
+        return bestDuration;
+    }
+
 
     static string MakeSafeFilename(string s)
     {
