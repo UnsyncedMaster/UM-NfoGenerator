@@ -60,10 +60,10 @@ namespace UM_NfoGenerator
             Console.WriteLine();
             string[] taglines =
             {
-        "Respect The Music. Respect The Scene.",
-        "Built By UnsyncedMaster — Crafted For Perfection.",
-        "UMNG: Pure Scene Energy.",
-        "When Rips Need Soul, UMNG Delivers."
+        "I Dont Have Any Taglines.",
+        "Gamer",
+        "UMNG: UrMomNotGooning",
+        "What"
     };
             Console.WriteLine(taglines[new Random().Next(taglines.Length)]);
             Thread.Sleep(1200);
