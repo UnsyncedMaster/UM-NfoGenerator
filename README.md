@@ -1,14 +1,55 @@
-# UM-NfoGenerator
-- UM-NfoGenerator, AKA UnsyncedMaster's .NFO Generator Is A Pure C# Project For Generating .NFO Files For Music Related Rips (CD, Tape, Vinyl, Streaming Etc), To Make It Easier On The Ripper, Free And Open Source!
+# 🎵 UM-NfoGenerator (UMNG)
 
-# What Is UM-NfoGenerator?
-- Its A .NFO File Generator Made For Rippers Of Music, So Think About CD Ripping, Cassettetape Ripping, Vinyl Ripping, And Streaming Ripping.
+> **UnsyncedMaster's .NFO Generator** — A Pure C# For Generating And Editing `.NFO` Files For **Music Rips** (CD, Tape, Vinyl, Streaming, Etc).
+> Designed To Safe A Little Time For The Rippers.
 
-# Why Make This?
-- Because It Servers As Past-Time And Helps Rippers Make Life A Little Bit Easier.
+---
 
-# Will This Include CD-Ripping?
-- It Might At Some Point.
+## 📘 What Is UM-NfoGenerator?
 
-# Why Only Music?
-- Because Thats What I Want LOL, MIGHT Include Movies And Shows.
+**UM-NfoGenerator** Is A Simple Yet Powerful `.NFO` File Generator For **Music Rippers**.  
+Whether You’re archiving **CDs**, **Cassettes**, **Vinyls**, or **Streaming Rips**, This Tool Helps You Quickly Create Consistent, Detailed (As Far As Detailed Goes) `.NFO` Files For Your Rips/Releases
+
+---
+
+## 🎧 Why Only Music?
+
+Because I'm Lazy Lmfao
+**Support For Movies/Shows** *MIGHT* Be Added In The Future
+
+---
+
+## 💿 Will This Include CD-Ripping Capabilities?
+
+Not Currently — But It **Might At Some Point** In The Future
+
+---
+
+## ⚙️ Features (Planned & Current)
+
+- ✅ Generate `.NFO` Files With Consistent Formatting  
+- ✅ User-Friendly Interface (Support For Drag And Drop Aswell)
+- 🧩 Optional metadata fields (artist, album, year, source, ripper, etc.)  
+- 🚧 (Planned) Integration With CD Ripping Tools
+- 🚧 (Planned) More Templates
+
+---
+
+## 🧑‍💻 Contributing
+
+Contributions are welcome!  
+If You'd Like To Help improve The Proj, Feel Free To **fork**, Make Changes, And/Or Submit A **pull request**.  
+
+---
+
+## 📜 License
+
+This Project Is **Open-Source** Under The **MIT License**.  
+Feel Free To Use, Modify, And Distribute It — Just Keep The Credits Intact.
+
+---
+
+## ⭐ Credits
+
+Created With ❤️ by **UnsyncedMaster**  
+> Helping Rippers Document Albums, EP's, Singles, And Mixtapes — One `.NFO` At A Time :)
