@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\updatechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\updatechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\duration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\duration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\defaulttemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\defaulttemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|c:\\users\\gebruiker\\source\\repos\\um-nfogenerator\\um-nfogenerator\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{870E2119-B418-4C4E-8713-8BA6BE08382D}|UM-NfoGenerator\\UM-NfoGenerator.csproj|solutionrelative:um-nfogenerator\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +42,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Duration.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Duration.cs",
+              "RelativeDocumentMoniker": "UM-NfoGenerator\\Duration.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Duration.cs*",
+              "RelativeToolTip": "UM-NfoGenerator\\Duration.cs*",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAIwAUBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T22:08:41.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Options.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Options.cs",
+              "RelativeDocumentMoniker": "UM-NfoGenerator\\Options.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Options.cs",
+              "RelativeToolTip": "UM-NfoGenerator\\Options.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T19:55:02.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DefaultTemp.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\DefaultTemp.cs",
+              "RelativeDocumentMoniker": "UM-NfoGenerator\\DefaultTemp.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\DefaultTemp.cs",
+              "RelativeToolTip": "UM-NfoGenerator\\DefaultTemp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T19:50:58.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UpdateChecker.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\UpdateChecker.cs",
+              "RelativeDocumentMoniker": "UM-NfoGenerator\\UpdateChecker.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\UpdateChecker.cs",
+              "RelativeToolTip": "UM-NfoGenerator\\UpdateChecker.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T19:39:35.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Splash.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Splash.cs",
+              "RelativeDocumentMoniker": "UM-NfoGenerator\\Splash.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Splash.cs",
+              "RelativeToolTip": "UM-NfoGenerator\\Splash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T19:34:38.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Program.cs",
               "RelativeDocumentMoniker": "UM-NfoGenerator\\Program.cs",
               "ToolTip": "C:\\Users\\Gebruiker\\source\\repos\\UM-NfoGenerator\\UM-NfoGenerator\\Program.cs*",
               "RelativeToolTip": "UM-NfoGenerator\\Program.cs*",
-              "ViewState": "AgIAAPoAAAAAAAAAAAAwwAoBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAALkAAAC4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T01:04:49.311Z",
               "EditorCaption": ""
